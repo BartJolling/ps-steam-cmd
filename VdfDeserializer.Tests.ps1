@@ -20,6 +20,33 @@ Describe 'VdfDeserializer::Deserialize' {
 
     Context ': Given a valid vdf as [string]' {
         It 'should return a valid object' {
+            $vdfContent = '
+                "basicvdf" 
+                { 
+                    "foo"
+                    {
+                        "baz" "1"
+                    }
+                    "bar" 
+                    {
+                        "qux" "2"
+                    }
+                }'
+            $result = $vdf.Deserialize($vdfContent);
+
+            $result | Should BeOfType [PSCustomObject];
+            $result.basicvdf | Should Not Be $null;
+            $result.basicvdf.foo | Should Not Be $null;
+            $result.basicvdf.bar | Should Not Be $null;
+            $result.basicvdf.foo.baz | Should Not Be $null;
+            $result.basicvdf.foo.baz | Should Be "1";
+            $result.basicvdf.bar.qux | Should Not Be $null;            
+            $result.basicvdf.bar.qux | Should Be "2";
+        }
+    }      
+
+    Context ': Given a valid vdf as [string] from Get-Content' {
+        It 'should return a valid object' {
             $vdfContent = Get-Content -Path ./vdf-test-files/basic.vdf -Raw;
             $result = $vdf.Deserialize($vdfContent);
 
