@@ -2,19 +2,21 @@ Using module .\VdfDeserializer.psm1;
 
 Describe 'VdfDeserializer::Deserialize' {
 
+    [VdfDeserializer]$Script:vdf = $null;
+
     BeforeEach {
-        $vdf = [VdfDeserializer]::new();
+        $Script:vdf = [VdfDeserializer]::new();
     }
 
     Context ': Given $null as argument' {
         It 'should throw an exception' {            
-            { $vdf.Deserialize($null) } | Should Throw;
+            { $Script:vdf.Deserialize($null) } | Should Throw;
         }
     }
 
     Context ': Given an empty [string]' {
         It 'should throw an exception' {
-            { $vdf.Deserialize("") } | Should Throw;
+            { $Script:vdf.Deserialize("") } | Should Throw;
         }
     }
 
@@ -32,7 +34,7 @@ Describe 'VdfDeserializer::Deserialize' {
                         "qux" "2"
                     }
                 }'
-            $result = $vdf.Deserialize($vdfContent);
+            $result = $Script:vdf.Deserialize($vdfContent);
 
             $result | Should BeOfType [PSCustomObject];
             $result.basicvdf | Should Not Be $null;
@@ -48,7 +50,7 @@ Describe 'VdfDeserializer::Deserialize' {
     Context ': Given a valid vdf as [string] from Get-Content' {
         It 'should return a valid object' {
             $vdfContent = Get-Content -Path ./vdf-test-files/basic.vdf -Raw;
-            $result = $vdf.Deserialize($vdfContent);
+            $result = $Script:vdf.Deserialize($vdfContent);
 
             $result | Should BeOfType [PSCustomObject];
             $result.basicvdf | Should Not Be $null;
@@ -64,7 +66,7 @@ Describe 'VdfDeserializer::Deserialize' {
     Context ': Given a [TextReader] based on a valid vdf' {
         It 'should return a valid object' {
             [System.IO.StreamReader] $reader = [System.IO.File]::OpenText('./vdf-test-files/basic.vdf');
-            $result = $vdf.Deserialize($reader);
+            $result = $Script:vdf.Deserialize($reader);
             
             $result | Should BeOfType [PSCustomObject];
             $result.basicvdf | Should Not Be $null;
