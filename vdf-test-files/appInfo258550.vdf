@@ -1,0 +1,172 @@
+"258550"
+{
+	"common"
+	{
+		"name"		"Rust Dedicated Server"
+		"type"		"Game"
+		"ReleaseState"		"released"
+		"oslist"		"windows,macos,linux"
+		"community_visible_stats"		"1"
+		"gameid"		"258550"
+		"store_tags"
+		{
+		}
+	}
+	"extended"
+	{
+		"gamedir"		""
+	}
+	"config"
+	{
+		"contenttype"		"3"
+		"installdir"		"rust_dedicated"
+	}
+	"depots"
+	{
+		"overridescddb"		"1"
+		"markdlcdepots"		"1"
+		"258551"
+		{
+			"name"		"rust dedicated - win64"
+			"systemdefined"		"1"
+			"config"
+			{
+				"oslist"		"windows"
+			}
+			"manifests"
+			{
+				"public"		"4838493772594548666"
+				"release-debug"		"816578751085404678"
+				"staging"		"7594650702117815490"
+			}
+			"maxsize"		"169750566"
+			"encryptedmanifests"
+			{
+				"debug"
+				{
+					"encrypted_gid_2"		"5DF2B23D5F79640FE8F4D27081D44056"
+					"encrypted_size_2"		"2EE640B02556E999033AF330AA5D2C4F"
+				}
+				"staging-debug"
+				{
+					"encrypted_gid_2"		"A552DF3C16F973CDEF3AAEDCE06CBEDE"
+					"encrypted_size_2"		"00D67FD7BE49747C0EFC56427C679CBD"
+				}
+			}
+		}
+		"258552"
+		{
+			"name"		"rust dedicated - linux64"
+			"config"
+			{
+				"oslist"		"linux"
+			}
+			"manifests"
+			{
+				"public"		"4676680323509793970"
+				"release-debug"		"8305401038939912362"
+				"staging"		"8052110754375941760"
+			}
+			"maxsize"		"166342352"
+			"encryptedmanifests"
+			{
+				"debug"
+				{
+					"encrypted_gid_2"		"2E1F82C055CCA0C4BAAAEC6D0E340E58"
+					"encrypted_size_2"		"6934BE44EDBAE662DBA0A772EF22543D"
+				}
+				"staging-debug"
+				{
+					"encrypted_gid_2"		"B122C1F9B5C97943334A724041D1C1E7"
+					"encrypted_size_2"		"A711D8D8402C7AF27FE90630C469993E"
+				}
+			}
+		}
+		"258553"
+		{
+			"name"		"rust dedicated - osx64"
+			"config"
+			{
+				"oslist"		"macos"
+			}
+			"manifests"
+			{
+				"public"		"259634356378763745"
+				"release-debug"		"8290633973068707550"
+				"staging"		"746444115262962426"
+			}
+			"maxsize"		"126612559"
+			"encryptedmanifests"
+			{
+				"debug"
+				{
+					"encrypted_gid_2"		"73D9D9480A9449159921D6433D4A7CA8"
+					"encrypted_size_2"		"3EBB2A0D69D9E2D1B1A33B97566CDAA7"
+				}
+				"staging-debug"
+				{
+					"encrypted_gid_2"		"6729E08A45D44FD03752C5DBB41D8B32"
+					"encrypted_size_2"		"5AF9AF544F46BE71BDA097E93B16742E"
+				}
+			}
+		}
+		"258554"
+		{
+			"name"		"rust dedicated - common"
+			"manifests"
+			{
+				"public"		"271681524811266853"
+				"staging"		"3337255507064086228"
+			}
+			"maxsize"		"5765267302"
+			"encryptedmanifests"
+			{
+				"staging-debug"
+				{
+					"encrypted_gid_2"		"5518840173C562FA1301A9758D4FF9B0"
+					"encrypted_size_2"		"6CE965463B28548308ECABDEEBE3DCB9"
+				}
+			}
+		}
+		"branches"
+		{
+			"public"
+			{
+				"buildid"		"3272026"
+				"timeupdated"		"1541188490"
+			}
+			"debug"
+			{
+				"buildid"		"3272040"
+				"description"		""
+				"pwdrequired"		"1"
+				"timeupdated"		"1541188417"
+			}
+			"release"
+			{
+				"buildid"		"3272026"
+				"description"		""
+				"timeupdated"		"1541184547"
+			}
+			"release-debug"
+			{
+				"buildid"		"3272040"
+				"description"		""
+				"timeupdated"		"1541184773"
+			}
+			"staging"
+			{
+				"buildid"		"3273041"
+				"description"		""
+				"timeupdated"		"1541213660"
+			}
+			"staging-debug"
+			{
+				"buildid"		"3273047"
+				"description"		""
+				"pwdrequired"		"1"
+				"timeupdated"		"1541213845"
+			}
+		}
+	}
+}
