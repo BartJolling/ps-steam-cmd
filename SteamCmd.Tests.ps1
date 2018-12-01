@@ -1,6 +1,6 @@
 Using module .\SteamCmd.psm1;
 
-Describe 'SteamCmd' {
+git statusDescribe 'SteamCmd' {
 
     $scriptFolder = Split-Path -Parent $PSCommandPath;
     $steamFolder = Join-Path $scriptFolder '\steamcmd\';
